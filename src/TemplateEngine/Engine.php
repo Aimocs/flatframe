@@ -1,30 +1,4 @@
 <?php
-//
-//namespace Aimocs\Iis\Flat\TemplateEngine;
-//
-//class Engine implements TemplateEngineInterface
-//{
-//
-//    private string $templatesDirectory;
-//
-//
-//    public function __construct(string $templatesDirectory)
-//    {
-//        $this->templatesDirectory = $templatesDirectory;
-//    }
-//
-//    public function render(string $path, array $data): string
-//    {
-//        extract($data);
-//        ob_start();
-//        $content  = file_get_contents($this->templatesDirectory . "/".$path.".yolo");
-//
-/*        eval('?>'.$content);*/
-//        $content = ob_get_clean();
-//        dump($content);
-//        return $content;
-//    }
-//}
 
 namespace Aimocs\Iis\Flat\TemplateEngine;
 
@@ -36,7 +10,7 @@ class Engine implements TemplateEngineInterface
     public function __construct(string $templatesDirectory)
     {
         $this->templatesDirectory = rtrim($templatesDirectory, DIRECTORY_SEPARATOR);
-        $this->cacheDirectory = dirname($templatesDirectory)."/cache12";
+        $this->cacheDirectory = dirname($templatesDirectory)."/cache";
 
         // Ensure cache directory exists
         if (!is_dir($this->cacheDirectory) && !mkdir($this->cacheDirectory, 0777, true)) {
