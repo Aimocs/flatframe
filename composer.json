@@ -1,0 +1,33 @@
+{
+  "name": "aimocs/flatframework",
+  "description": "fast flat starter",
+  "minimum-stability": "dev",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "aimocs"
+    }
+  ],
+  "require-dev": {
+    "symfony/var-dumper": "6.3.x-dev",
+    "phpunit/phpunit": "^11.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "Aimocs\\Iis\\Flat\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Aimocs\\Iis\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": [
+      "phpunit"
+    ]
+  },
+  "require": {
+    "psr/container": "^2.0"
+  }
+}
